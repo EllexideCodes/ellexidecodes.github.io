@@ -4,5 +4,5 @@ function loader() {
 
 function showPage() {
   document.getElementById('loader').style.display = 'none';
-  document.getElementById('words').style.display = 'block';
+  document.getElementById('page').style.display = 'block';
 }
