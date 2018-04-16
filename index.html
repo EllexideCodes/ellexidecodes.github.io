@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Ellexide Codes official website homepage" name="description">
+  <meta content="homepage Ellexide EllexideCodes" name="keywords">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ellexide Codes</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link href="https://i.imgur.com/04V66cS.png" rel="icon">
+  <link href="./stylesheets/loader.css" rel="stylesheet" media="screen">
+  <link href="./stylesheets/base.css" rel="stylesheet" media="screen">
+  <script src="./scripts/functions.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.6/typed.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./stylesheets/homepage.css">
+  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/ptah" type="text/css"/>
+</head>
+<body onload="loader()">
+  <div class="wrap" id="loader">
+    <div class="bg">
+      <div class="loading">
+        <span class="title">loading layouts</span>
+        <span class="text">building gallery</span>
+      </div>
+    </div>
+  </div>
+  
+<div id="page">
+  <div id="back"></div>
+  
+  <div id="content">
+<nav class="menu">
+    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+    <label class="menu-open-button" for="menu-open">
+      <span class="hamburger hamburger-1"></span>
+      <span class="hamburger hamburger-2"></span>
+      <span class="hamburger hamburger-3"></span>
+    </label>
+    
+    <a href="./placeholder.html" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+    <a href="./placeholder.html" class="menu-item"> <i class="fa fa-code"></i> </a>
+    <a href="./placeholder.html" class="menu-item"> <i class="fa fa-question"></i> </a>
+    <a href="./placeholder.html" class="menu-item"> <i class="fa fa-warning"></i> </a>
+    <a href="./about.html" class="menu-item"> <i class="fa fa-info"></i> </a>
+  
+  </nav>
+  
+  
+  <!-- filters -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <defs>
+        <filter id="shadowed-goo">
+            
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+            <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
+            <feBlend in2="shadow" in="goo" result="goo" />
+            <feBlend in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+        <filter id="goo">
+            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+            <feBlend in2="goo" in="SourceGraphic" result="mix" />
+        </filter>
+      </defs>
+  </svg>
+
+
+  <!-- typing -->
+  <div id="window">
+    <div class="topbar">
+      <div class="button"></div>
+      <div class="button"></div>
+      <div class="button"></div>
+    </div>
+    me = Person();<br><br>
+    if (me.awake()) {<br>
+    &nbsp;&nbsp;me.code();<br>
+    } else if (me.sleepy()) {<br>
+    &nbsp;&nbsp;me.add('coffee');<br>
+    } else if (me.hungry()) {<br>
+    &nbsp;&nbsp;me.add('food');<br>
+    } else {<br>
+    &nbsp;&nbsp;me.sleep();<br>
+    }
+
+  </div>
+</div>
+</div>
+</body>
+</html>
