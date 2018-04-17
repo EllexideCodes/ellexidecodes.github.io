@@ -1,6 +1,5 @@
 #window {
-  position: absolute;
-  top: 20%;
+  position: relative;
   width: 40%;
   left: 28%;
   height: 48%;
@@ -14,6 +13,14 @@
   font-style: normal; 
   padding-top:40px;
   font-size: 3vh;
+}
+
+#window .comment{
+  color: #3e6d3d;
+}
+
+#window .comment:before {
+  content: '//';
 }
 
 .topbar{
@@ -41,3 +48,5 @@
 .button:first-child{background:radial-gradient(ellipse at center, #ff2e2e, #bd1414)}
 .button:nth-child(2){background:radial-gradient(ellipse at center, #fffc2e, #b2bd14)}
 .button:nth-child(3){background:radial-gradient(ellipse at center, #58ff2e, #1abd14)}
+
+.ec{background-image: url(https://i.imgur.com/XGglbD0.png)};
