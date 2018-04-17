@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Gallery of E.C. layouts" name="description">
+  <meta content="Gallery Ellexide EllexideCodes gallery rpc profile layouts roleplay" name="keywords">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>E.C. Gallery</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link href="https://i.imgur.com/04V66cS.png" rel="icon">
+  <link href="./stylesheets/loader.css" rel="stylesheet" media="screen">
+  <link href="./stylesheets/base.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./stylesheets/gallery.css">
+  <script src="./scripts/functions.js"></script>
+  <script src='https://rawgit.com/EllexideCodes/Profile-Codes/master/repeatedEffects/tooltip.js'></script>
+  <script src="./scripts/credit.js"></script>
+</head>
+<body onload="loader()">
+  <div class="wrap" id="loader">
+    <div class="bg">
+      <div class="loading">
+        <span class="title">loading layouts</span>
+        <span class="text">building gallery</span>
+      </div>
+    </div>
+  </div>
+  
+<div id="page">
+<div id="back"></div>
+  <div id="content">
+<nav class="menu">
+<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+<label class="menu-open-button" for="menu-open">
+<span class="hamburger hamburger-1"></span>
+<span class="hamburger hamburger-2"></span>
+<span class="hamburger hamburger-3"></span>
+</label>
+
+<a href="./contact-me.html" class="menu-item"> <i class="fa fa-envelope"></i> </a>
+<a href="./frequently-asked-questions.html" class="menu-item"> <i class="fa fa-question"></i> </a>
+<a href="./terms_of_service.html" class="menu-item"> <i class="fa fa-warning"></i> </a>
+<a href="./about.html" class="menu-item"> <i class="fa fa-info"></i> </a>
+<a href="/" class="menu-item"> <i class="fa fa-home"></i> </a>,
+
+</nav>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<filter id="shadowed-goo">
+
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+<feBlend in2="shadow" in="goo" result="goo" />
+<feBlend in2="goo" in="SourceGraphic" result="mix" />
+</filter>
+<filter id="goo">
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+<feBlend in2="goo" in="SourceGraphic" result="mix" />
+</filter>
+</defs>
+</svg>
+
+<div class="title">Gallery of Layouts</div>
+
+<div class="legend">
+  <label class="container" onclick="filterGallery('commission')"> -- Commissioned
+    <span class="circle commission"></span>
+  </label>
+  <label class="container" onclick="filterGallery('request')"> -- Request
+    <span class="circle request"></span>
+  </label>
+  <label class="container" onclick="filterGallery('free')"> -- Premade
+    <span class="circle free"></span>
+  </label>
+  <label class="container" onclick="filterGallery('raffle')"> -- Raffle Code
+    <span class="circle raffle"></span>
+  </label> <br>
+  <p>Click on the enlarged image to obtain the codes for premade codes and preview links for the rest. Click away, to go back to gallery.</p>
+  <p>Filter types using the above links. Scroll all the way down to see other coders.</p>
+</div>
+
+<div class="gallery-table">
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Alistair" target="_blank"><img src="https://i.imgur.com/K5MtqCt.jpg"></a>
+    <div class="content">Alistair Bellenmondt</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Tsubaki." target="_blank"><img src="https://i.imgur.com/iPKsxUB.jpg"></a>
+    <div class="content">Tsubaki</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/q67Tnb3h" target="_blank"><img src="https://78.media.tumblr.com/e9bbe25e2777f9a857cbfaa85741a2f4/tumblr_p6c3hlmNKc1wt4y5to1_1280.png"></a>
+    <div class="content">Ruby Eyes</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=.Alicia" target="_blank"><img src="https://i.imgur.com/pHMiLEq.jpg"></a>
+    <div class="content">Alicia</div>
+  </div>
+  <div class="gallery-item raffle">
+    <a href="https://roleplay.chat/profile.php?user=Macy" target="_blank"><img src="https://i.imgur.com/vxJYSWh.png"></a>
+    <div class="content">Macy Lantern</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Her+Messenger" target="_blank"><img src="https://i.imgur.com/gmjpBUC.jpg"></a>
+    <div class="content">Richter</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Apprentice+Mage" target="_blank"><img src="https://i.imgur.com/Qth8TaY.jpg"></a>
+    <div class="content">Shirou Emiya</div>
+  </div>
+  <div class="gallery-item request">
+    <a href="https://roleplay.chat/profile.php?user=Star+Girl" target="_blank"><img src="https://i.imgur.com/C5T01OW.jpg"></a>
+    <div class="content">Star Girl</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Riven+Laroche" target="_blank"><img src="https://i.imgur.com/vbr8Ydz.jpg"></a>
+    <div class="content">Riven Laroche</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Contract" target="_blank"><img src="https://i.imgur.com/F4h6Bw3.jpg"></a>
+    <div class="content">Contract</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/C935JDZ4" target="_blank"><img src="https://i.imgur.com/mHizOIb.png"></a>
+    <div class="content">Sirena</div>
+  </div>
+  <div class="gallery-item request">
+    <img src="https://i.imgur.com/ltMZks7.png">
+    <div class="content">Literature Club</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/tngNSvFi" target="_blank"><img src="https://i.imgur.com/HArym3k.jpg"></a>
+    <div class="content">Assassin</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Rider+of+Red" target="_blank"><img src="https://i.imgur.com/DlSipjE.jpg"></a>
+    <div class="content">Rider of Red</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/tckGHLPZ" target="_blank"><img src="https://i.imgur.com/EjMRBkk.jpg"></a>
+    <div class="content">Comic</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/j5Cd6sNU" target="_blank"><img src="https://i.imgur.com/piQ6WaW.jpg"></a>
+    <div class="content">Sphinx</div>
+  </div>
+  <div class="gallery-item commission">
+    <a href="https://roleplay.chat/profile.php?user=Hurricane" target="_blank"><img src="https://i.imgur.com/UfjJYGg.jpg"></a>
+    <div class="content">Hurricane</div>
+  </div>
+  <div class="gallery-item request">
+    <a href="https://roleplay.chat/profile.php?user=Yang" target="_blank"><img src="https://i.imgur.com/Fjwc64w.jpg"></a>
+    <div class="content">Yang Xiao Long</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/DteQj7nL" target="_blank"><img src="https://i.imgur.com/dnpb4Q2.jpg"></a>
+    <div class="content">Fern</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/U00WKnZG" target="_blank"><img src="https://i.imgur.com/6PvyYMb.jpg"></a>
+    <div class="content">Grym</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/BX3WGxNB" target="_blank"><img src="https://i.imgur.com/sNdbP0I.jpg"></a>
+    <div class="content">Singer</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/hhq69HeY" target="_blank"><img src="https://i.imgur.com/XkCmCW0.jpg"></a>
+    <div class="content">Kitty Cat</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/D6h0qNvY" target="_blank"><img src="https://i.imgur.com/kPnPgcX.jpg"></a>
+    <div class="content">Elsie</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/GiL7JF5F" target="_blank"><img src="https://i.imgur.com/KSFjXSV.jpg"></a>
+    <div class="content">Doggo</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/uqnzTxqD" target="_blank"><img src="https://i.imgur.com/awGkAES.jpg"></a>
+    <div class="content">Superbia</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/YU5mSdCH" target="_blank"><img src="https://i.imgur.com/GriEoQl.jpg"></a>
+    <div class="content">Queen</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/rLhJUrZK" target="_blank"><img src="https://i.imgur.com/aVvMxTb.jpg"></a>
+    <div class="content">Pink</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/92vbJB4m" target="_blank"><img src="https://i.imgur.com/21oTd3W.jpg"></a>
+    <div class="content">Lavender</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/0KnakNMi" target="_blank"><img src="https://i.imgur.com/2uosjxd.jpg"></a>
+    <div class="content">Fennec</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/pAdVF7AT" target="_blank"><img src="https://i.imgur.com/08YvM1c.jpg"></a>
+    <div class="content">Pride</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/srfAqZQC" target="_blank"><img src="https://i.imgur.com/uC8TsJX.jpg"></a>
+    <div class="content">Ryujin</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/zRSeEj5y" target="_blank"><img src="https://i.imgur.com/zU5fKds.jpg"></a>
+    <div class="content">Llama</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/uNHtK9Pt" target="_blank"><img src="https://i.imgur.com/SFVyOwS.jpg"></a>
+    <div class="content">Coffee</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/92A0LJBX" target="_blank"><img src="https://i.imgur.com/GUw603u.jpg"></a>
+    <div class="content">Police File</div>
+  </div>
+  <div class="gallery-item free">
+    <a href="https://pastebin.com/A9V0KHt4" target="_blank"><img src="https://i.imgur.com/mStQQx0.jpg"></a>
+    <div class="content">Nahia</div>
+  </div>
+</div>
+<div class="shadow"></div>
+
+<div id="newsletter">
+  <h1>Admired Coders</h1>
+  <p>If my layouts aren't up to your fancy, here are a short list of some of my most admired coders.</p>
+  <ul>
+    <li><a href="https://roleplay.chat/profile.php?user=UFO" target="_blank">U.F.O.</a></li>
+    <li><a href="http://devilslocketdesigns.webs.com/" target="_blank">Devil's Locket Designs</a></li>
+    <li><a href="https://roleplay.chat/profile.php?user=Viking" target="_blank">Viking</a></li>
+    <li><a href="https://roleplay.chat/profile.php?user=Alcyone" target="_blank">Alcyone</a></li>
+    <li><a href="http://pastebin.com/u/A_Bad_Bitch" target="_blank">A Bad Bitch</a></li>
+  </ul>
+</div>
+
+<div class="footer">&copy; Copyright 2018 || Ellexide Codes</div>
+  </div>
+</div>
+</body>
+</html>
