@@ -42,6 +42,26 @@ function pullForm(id) {
   }
 }
 
-function checkform() {
-
+function filterGallery(type){
+  var boi = $('.circle.'+type);
+  if(boi.hasClass('selected')) {
+    boi.removeClass('selected');
+    $('.gallery-item').show();
+  } else {
+    var thisClass;
+    $('.circle').removeClass('selected');
+    boi.addClass('selected');
+    if(boi.hasClass('commission')) {
+      thisClass = 'commission';
+    } else if (boi.hasClass('request')) {
+      thisClass = 'request';
+    } else if (boi.hasClass('free')) {
+      thisClass = 'free';
+    } else if (boi.hasClass('raffle')) {
+      thisClass = 'raffle';
+    }
+    $('.gallery-item').hide();
+    $('.gallery-item.'+thisClass).show();
+    
+  }
 }
