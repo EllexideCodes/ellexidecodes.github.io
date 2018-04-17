@@ -65,3 +65,15 @@ function filterGallery(type){
     
   }
 }
+
+$(document).ready(()=>{
+  $('.gallery-item').click(event=>{
+    $(event.currentTarget).toggleClass('selected');
+    $('.shadow').toggle();
+  })
+
+  $('.shadow').click(()=>{
+    $('.gallery-item').removeClass('selected');
+    $('.shadow').hide();
+  })
+})
