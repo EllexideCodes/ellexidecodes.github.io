@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Contact Ellexide Codes" name="description">
+  <meta content="Contact Ellexide EllexideCodes rpc roleplay profile layouts character" name="keywords">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Contact Me | Ellexide Codes</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <link href="https://i.imgur.com/04V66cS.png" rel="icon">
+  <link href="./stylesheets/loader.css" rel="stylesheet" media="screen">
+  <link href="./stylesheets/base.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./stylesheets/forms.css">
+  <script src="./scripts/functions.js"></script>
+  <script src='https://rawgit.com/EllexideCodes/Profile-Codes/master/repeatedEffects/tooltip.js'></script>
+  <script src="./scripts/credit.js"></script>
+</head>
+<body onload="loader()">
+  <div class="wrap" id="loader">
+    <div class="bg">
+      <div class="loading">
+        <span class="title">loading layouts</span>
+        <span class="text">building gallery</span>
+      </div>
+    </div>
+  </div>
+  
+<div id="page">
+<div id="back"></div>
+  <div id="content">
+<nav class="menu">
+<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+<label class="menu-open-button" for="menu-open">
+<span class="hamburger hamburger-1"></span>
+<span class="hamburger hamburger-2"></span>
+<span class="hamburger hamburger-3"></span>
+</label>
+
+<a href="./placeholder.html" class="menu-item"> <i class="fa fa-code"></i> </a>
+<a href="./frequently-asked-questions.html" class="menu-item"> <i class="fa fa-question"></i> </a>
+<a href="./terms_of_service.html" class="menu-item"> <i class="fa fa-warning"></i> </a>
+<a href="./about.html" class="menu-item"> <i class="fa fa-info"></i> </a>
+<a href="/" class="menu-item"> <i class="fa fa-home"></i> </a>,
+
+</nav>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<filter id="shadowed-goo">
+
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+<feBlend in2="shadow" in="goo" result="goo" />
+<feBlend in2="goo" in="SourceGraphic" result="mix" />
+</filter>
+<filter id="goo">
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+<feBlend in2="goo" in="SourceGraphic" result="mix" />
+</filter>
+</defs>
+</svg>
+
+<div id="newsletter">
+  <h1>Obtain E.C. Products</h1>
+
+  <!-- TOPIC SELECT -->
+  <div class="dropdown">
+      <button id="selectTopic" class="dropbtn">Select your topic</button>
+      <div class="dropdown-content">
+        <div class="item tooltip" title="Commission a profile" onclick="pullForm('#commissionForm')">Commission</div>
+        <div class="item tooltip" title="Send in a request" onclick="pullForm('#requestForm')">Request</div>
+        <div class="item tooltip" title="Send in a request for a specific profile add on" onclick="pullForm('#addonForm')">Profile Add On</div>
+        <div class="item tooltip" title="render a photo, turn multiple photos into a gif, or minor gif manipulation" onclick="pullForm('#pictureForm')">Picture Render</div>
+        <div class="item tooltip" title="This doesn't have to be an E.C. Product. If you somehow cannot contact the original author, I am happy to help in their stead." onclick="pullForm('#proileForm')">Profile Edit</div>
+        <div class="item tooltip" title="Have specific question not in FAQs?" onclick="pullForm('#askForm')">Inquiry</div>
+      </div>
+    </div>
+
+  <!--
+    ===================
+    ****** FORMS ******
+    ===================
+  -->
+
+  <!-- COMMISSION FORM -->
+  <form class="form" id="commissionForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Commission!" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Commission Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Commission</div>
+        <b>RPC Profile:</b> <br>
+      <input type="text" name="profile" placeholder="Profile to Commission | Link or username" required> <br>
+        <b>Initial Budget Range:</b> <br>
+      <input type="text" name="budget" placeholder="$xx - $xx" required> <br>
+        <b>Image Link/s:</b> <br>
+      <input type="text" name="imageLinks" placeholder="Direct Links" required> <br>
+        <b>YOUR MESSAGE:</b> <i>[optional]</i><br>
+      <textarea name="message" placeholder="Your Message"></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+
+
+
+  <!-- REQUEST FORM -->
+  <form class="form" id="requestForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Request!" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Request Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Request</div>
+        <b>RPC Profile:</b> <br>
+      <input type="text" name="profile" placeholder="Profile to Request | Link or username" required> <br>
+        <b>Image Link/s:</b> <br>
+      <input type="text" name="imageLinks" placeholder="Direct Links" required> <br>
+        <b>YOUR MESSAGE:</b> <i>[encouraged]</i><br>
+      <textarea name="message" placeholder="Your Message"></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+
+
+
+  <!-- PROFILE ADD ON -->
+  <form class="form" id="addonForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Profile Add On" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Profile Add On Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Profile Add On</div>
+        <b>RPC Profile:</b> <br>
+      <input type="text" name="profile" placeholder="Profile for add on | Link or username" required> <br>
+        <b>TYPE:</b> <br>
+      <input type="text" name="imageLinks" placeholder="Gallery, Links, New Tab, etc." required> <br>
+        <b>YOUR MESSAGE:</b> <i>[optional]</i><br>
+      <textarea name="message" placeholder="Your Message"></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+
+
+
+  <!-- PICTURE RENDER -->
+  <form class="form" id="pictureForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="New Picture" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Picture Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Photo Manipulation</div>
+        <b>TYPE:</b> <br>
+      <input type="text" name="type" placeholder="Images-To-Gif, Rendering, etc." required> <br>
+        <b>Image Link/s:</b> <br>
+      <input type="text" name="imageLinks" placeholder="Direct Links" required> <br>
+        <b>YOUR MESSAGE:</b> <i>[optional]</i><br>
+      <textarea name="message" placeholder="Your Message"></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+
+
+
+  <!-- PROFILE EDIT -->
+  <form class="form" id="profileForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Profile Edit" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Profile Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Profile Edit</div>
+        <b>ORIGINAL DEVELOPER:</b> <br>
+      <input type="text" name="developer" placeholder="Dev Name" required> <br>
+        <b>RPC Profile:</b> <br>
+      <input type="text" name="profile" placeholder="Profile to edit | Link or username" required> <br>
+        <b>YOUR MESSAGE:</b> <br>
+      <textarea name="message" placeholder="What kind of edit do you want?" required></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+
+
+
+  <!-- INQUIRY FORM -->
+  <form class="form" id="askForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Inquiry" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Other Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Inquiry</div>
+        <b>YOUR MESSAGE:</b> <br>
+      <textarea name="message" placeholder="How can I help you?" required></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+
+
+  <h1>General Contact Information</h1>
+  <p>Here are the list of places where you can contact me. <i>Please note that you have more luck with a cohesive and detailed reply filling out the forms.</i> My replies on other accounts will be lighter and quick as I am almost always on the move.</p>
+  <p>
+    <b>RPC MAIL TO:</b> <a href="https://roleplay.chat/profile.php?user=Ellexide" target="_blank">Ellexide</a> <br>
+    <b>DISCORD:</b> Lil Monster#3557 <br>
+    <b>E-MAIL:</b> <a href="mailto:ellexidecodes@gmail.com">ellexidecodes@gmail.com</a>
+  </p>
+
+
+
+  <!-- TROUBLESHOOTING -->
+  <h1>Troubleshooting</h1>
+  <form action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Troubleshoot" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Troubleshooting Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Troubleshoot</div>
+        <b>TYPE OF CODE:</b> <br>
+      <label class="container"> Commissioned
+        <input type="radio" name="code-type" value="commissioned">
+        <span class="circle"></span>
+      </label>
+      <label class="container"> Requested
+        <input type="radio" name="code-type" value="requested">
+        <span class="circle"></span>
+      </label>
+      <label class="container"> Premade
+        <input type="radio" name="code-type" value="pre-made">
+        <span class="circle"></span>
+      </label>
+      <label class="container"> Raffle
+        <input type="radio" name="code-type" value="raffle">
+        <span class="circle"></span>
+      </label> <br>
+        <b>YOUR MESSAGE:</b> <br>
+      <textarea name="message" placeholder="Please state the nature of your problem" required></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <button type="submit">Send</button>
+  </form>
+</div>
+
+<div class="footer">&copy; Copyright 2018 || Ellexide Codes</div>
+  </div>
+</div>
+</body>
+</html>
