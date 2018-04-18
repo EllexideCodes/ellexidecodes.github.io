@@ -36,6 +36,11 @@ body:hover::-webkit-scrollbar{opacity:1;}
 
 a{color: inherit}
 
+/*------------------------------------------------------------------------*
+ * SPECIAL THANKS TO LUCAS BEBBER : https://codepen.io/lbebber/pen/LELBEo *
+ *------------------------------------------------------------------------*/
+
+
 .menu {
   -webkit-filter: url("#shadowed-goo");
           filter: url("#shadowed-goo");
