@@ -263,3 +263,25 @@ a{color: inherit}
   margin-left: 10px;
   margin-bottom: 5px;
 }
+
+div.tooltipMessage {
+  z-index: 9001;
+  position: absolute;
+  min-width: 15%;
+  max-width: 25%;
+  text-align: center;
+  background: white;
+  border: 2px solid  transparent;
+  padding: 10px;
+  font-family: 'Nobile', sans-serif;
+  font-size: 14px;
+  font-weight:  100;
+  color:  #222;
+  pointer-events: none;
+}
+
+div.tooltipMessage > span {
+  display: inline-block;
+}
+
+div.tooltipMessage.left > span {float: right;}
