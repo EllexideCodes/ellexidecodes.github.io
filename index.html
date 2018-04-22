@@ -3,112 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="Ellexide Codes official website homepage" name="description">
-  <meta content="homepage Ellexide EllexideCodes" name="keywords">
+  <meta content="Welcome to Ellexide Codes official website" name="description">
+  <meta content="rpc layouts profiles Ellexide EllexideCodes website roleplay homepage" name="keywords">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ellexide Codes</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+  <!-- links -->
   <link href="https://i.imgur.com/04V66cS.png" rel="icon">
-  <link href="./stylesheets/loader.css" rel="stylesheet" media="screen">
-  <link href="./stylesheets/base.css" rel="stylesheet" media="screen">
-  <script src="./scripts/functions.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.6/typed.min.js"></script>
-  <script src="./scripts/credit.js"></script>
+  <!-- styles -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="./stylesheets/homepage.css">
-  <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/ptah" type="text/css"/>
-  <script src="./scripts/credit.js"></script>
+  <link rel="stylesheet" href="stylesheets/homepage-two.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <!-- scripts -->
+  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+  <script src="./scripts/functions.js"></script>
 </head>
-<body onload="loader()">
-  <div class="wrap" id="loader">
-    <div class="bg">
-      <div class="loading">
-        <span class="title">loading layouts</span>
-        <span class="text">building gallery</span>
-      </div>
+<body>
+<!-- generic background -->
+<div id="particles-js"></div>
+
+<script src="./scripts/particles.js"></script>
+
+<!-- website start -->
+<div class="content">
+  <!-- header -->
+  <h1 class="title">Ellexide Codes</h1>
+
+  <div class="ham" onclick="toggleMenu()"><div class="burger"></div></div>
+  <!-- actual menu -->
+  <div id="menu-overlay" onclick="toggleMenu()">
+    <div class="menu-slide menu">
+      <ul>
+        <a href="/"><li><span class="fa fa-home"></span> Home</li></a>
+        <a href="./about"><li><span class="fa fa-info info"></span> About</li></a>
+        <a href="./terms_of_service"><li><span class="fa fa-warning"></span> TOS</li></a>
+        <a href="./codes"><li><span class="fa fa-code"></span> Gallery</li></a>
+        <a href="./contact-me"><li><span class="fa fa-envelope"></span> Contact Me</li></a>
+        <a href="https://paypal.me/Ellexide"><li><span class="fa fa-money"></span> Donate</li></a>
+        <li style="text-align: center; color: #666;font-size: .6em; position: absolute; bottom: 2em">&copy; Copyright 2018 || Ellexide Codes</li>
+      </ul>
     </div>
   </div>
-  
-<div id="page">
-  <div id="back"></div>
-  
-  <div id="content">
-<nav class="menu">
-    <input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
-    <label class="menu-open-button" for="menu-open">
-      <span class="hamburger hamburger-1"></span>
-      <span class="hamburger hamburger-2"></span>
-      <span class="hamburger hamburger-3"></span>
-    </label>
-    
-    <a href="./contact-me" class="menu-item"> <i class="fa fa-envelope"></i> </a>
-    <a href="./codes" class="menu-item"> <i class="fa fa-code"></i> </a>
-    <a href="./frequently-asked-questions" class="menu-item"> <i class="fa fa-question"></i> </a>
-    <a href="./terms_of_service" class="menu-item"> <i class="fa fa-warning"></i> </a>
-    <a href="./about" class="menu-item"> <i class="fa fa-info"></i> </a>
-  
-  </nav>
-  
-  
-  <!-- filters -->
-  <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
-      <defs>
-        <filter id="shadowed-goo">
-            
-            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
-            <feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
-            <feOffset in="shadow" dx="1" dy="1" result="shadow" />
-            <feBlend in2="shadow" in="goo" result="goo" />
-            <feBlend in2="goo" in="SourceGraphic" result="mix" />
-        </filter>
-        <filter id="goo">
-            <feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
-            <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
-            <feBlend in2="goo" in="SourceGraphic" result="mix" />
-        </filter>
-      </defs>
-  </svg>
-
-
-  <!-- typing -->
-
-  <div id="newsletter">
-    <h1>Introduction & Overview</h1>
-    <div class="imgLeft ec"></div>
-    <p>Hello! Welcome to the official website of <b>Ellexide Codes</b>. This website takes you through all information about commissioning, requesting, or even simply viewing E.C. Layouts and/or E.C. Products.</p>
-    <p>Ellexide Codes does not only offer layouts but also basic photoediting, profile add ons, JavaScript flairs, intermediate coding lessons and layouts for studying.</p>
-    <p>Elle offers help to those aiming to be profile makers themselves, though she does not claim to know everything. There is still much to be improved but if she can somehow help, she will.</p>
-    <p>If the layouts showcased in this website is not up to your fancy, E.C. also offers links to other Profile Makers that she admires and would highly recommend based off of their work.</p>
-    <p><i>Disclaimer:</i> Because of the time limitation of juggling her layout making, life, job, and other different responsibilities, she is not <u>guaranteed</u> to give help.</p>
-    <p><b>Note:</b> All E.C. Products does not have to be for an E.C. Layout. You may have a devilslocketdesign and have a E.C. profile add on and that is perfectly fine. All products offered are non-exclusive and profile/user friendly.</p>
-    <h1>Commission Status: OPEN</h1>
-    <p>Proceed to <a href="./contact-me">support</a> to start commissioning. For more information, head to <a href="./frequently-asked-questions">Information Center</a>.</p>
+  <!-- content -->
+  <div class="nav" style="margin-bottom: 50px">
+    <ul>
+      <li>Web Designs</li>
+      <span>|</span>
+      <li>Character Layouts</li>
+      <span>|</span>
+      <li>Minor Photo Manipulation</li>
+      <span>|</span>
+      <li>Profile Add Ons</li>
+      <span>|</span>
+      <li>Bug Fixes</li>
+    </ul>
   </div>
-
-  <div id="window">
-    <div class="topbar">
-      <div class="button"></div>
-      <div class="button"></div>
-      <div class="button"></div>
-    </div>
-    <span class="comment">Life Motto:</span><br>
-    <font color="skyblue">me</font> = <font color="#fffd99">Person</font>();<br><br>
-    <font color="slateblue">if</font> (<font color="skyblue">me</font>.<font color="#fffd99">awake</font>()) {<br>
-    &nbsp;&nbsp;<font color="skyblue">me</font>.<font color="#fffd99">code</font>();<br>
-    } <font color="slateblue">else if</font> (<font color="skyblue">me</font>.<font color="#fffd99">tired</font>()) {<br>
-    &nbsp;&nbsp;<font color="skyblue">me</font>.<font color="#fffd99">add</font>(<font color="#e29a48">'coffee'</font>);<br>
-    } <font color="slateblue">else if</font> (<font color="skyblue">me</font>.<font color="#fffd99">hungry</font>()) {<br>
-    &nbsp;&nbsp;<font color="skyblue">me</font>.<font color="#fffd99">add</font>(<font color="#e29a48">'food'</font>);<br>
-    } <font color="slateblue">else</font> {<br>
-    &nbsp;&nbsp;<font color="skyblue">me</font>.<font color="#fffd99">sleep</font>();<br>
-    }<br>
-    <span class="comment">Webpage is constantly a work in progress</span>
+  <div class="cut"></div>
+  <div class="desc pad">
+    <p>
+      Being one who wishes to express a certain creative liberty as well as freedom to design the way I--or any of my works--am presented, I have opted to move out of any blogging website or
+      "layout" type websites to completely code my own. This way, just by being in this website, you may know the different effects, and just how far I can go.~
+    </p>
+    <p>
+      Having a website of my own makes it easy for you to navigate as well as for me to arrange. I know there has been some fuss to know which codes are free and which aren't. <i>Fear not!</i> I am going to make it super easy for you to pick which is which now!
+    </p>
+    <p>
+      <b>P.S.:</b> Yeah, I know the landing looks <i>completely</i> different than the rest of the website. That is because I started and finished coding one type of aesthetic and realized I did not like the way it looked. Which is why I am slowly turning the pages 
+      to a different theme--<b>Minimalistic</b>. For now, please bear with me as I go through each page and fix them up.
+    </p>
   </div>
-
-  <div class="footer">&copy; Copyright 2018 || Ellexide Codes</div>
-</div>
+  <div class="cut"></div>
 </div>
 </body>
 </html>

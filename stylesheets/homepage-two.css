@@ -1,0 +1,235 @@
+/* -- body like a wonderland -- */
+html, body {
+  margin: 0;
+}
+
+html {
+  overflow: auto;
+}
+
+body {
+  background: #CCC;
+  color: #333;
+  padding-right: 30px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/* -- scrollbars -- */
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 2px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: transparent;
+  transition: all .2s ease;
+  border-radius: 2px;
+}
+
+body:hover::-webkit-scrollbar-thumb {
+  background: rgba(119, 119, 119, 0.418);
+}
+
+*{
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+#particles-js {
+  background: transparent;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+}
+
+.content {
+  height: 120vh;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.title {
+  letter-spacing: .2em;
+  font-weight: 200;
+  font-size: 2.3em;
+  font-weight: 200;
+  letter-spacing: .3em;
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+
+.title::before {
+  content: "< "
+}
+
+.title::after {
+  content: " />"
+}
+
+.cut {
+  height: 2px;
+  width: 30%;
+  margin-left: 35%;
+  background: #aaa;
+}
+
+.nav ul {
+  list-style-type: none;
+  font-size: 1em;
+  font-weight: 200;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 10px;
+}
+
+.nav ul a {
+  color: #333;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.nav ul li:hover a {
+  color: #410909;
+  font-weight: bold;
+  letter-spacing: .2em;
+}
+
+.menu ul {
+  list-style: none;
+  font-size: 1.3em;
+  font-weight: 200px;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+  margin-left: .5em;
+  padding: 10px;
+}
+
+.menu ul li {
+  margin-top: 1em;
+}
+
+.menu ul li span {
+  margin-right: 2em;
+}
+
+.info {
+  margin-left: .3em;
+  margin-right: 2.2em !important;
+}
+
+.menu ul a {
+  color: #ccc;
+  text-decoration: none;
+  text-align: left;
+  transition: all .4s ease-in-out;
+}
+
+.menu ul a:hover {
+  letter-spacing: 0.2em;
+}
+
+.ham {
+  height: 10px;
+  position: fixed;
+  top: 3.5em;
+  left: 3.5em;
+  cursor: pointer;
+  width: 2em;
+  padding-top: .5em;
+}
+
+.burger {
+  position: relative;
+  height: 3px;
+  width: 100%;
+  background: #333;
+}
+
+.burger::before, .burger::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  left: 0;
+  background: #333;
+}
+
+.burger::before {
+  top: -.5em;
+}
+
+.burger::after {
+  bottom: -.6em;
+}
+
+#menu-overlay:target {
+  display: block;
+}
+
+#menu-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1000;
+  display: none;
+}
+
+.menu-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 20%;
+  background: #191919;
+  box-shadow: 4px 0 1em black;
+  transform: translateX(-105%);
+  animation: thisOne .2s forwards;
+  animation-delay: .2s;
+}
+
+@keyframes thisOne {
+  to {transform: translateX(0)}
+}
+
+h1{font-weight: 200;font-size: 1.8em}
+
+.desc {
+  font-size: 1.1em;
+  text-align: center;
+}
+
+.pad {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

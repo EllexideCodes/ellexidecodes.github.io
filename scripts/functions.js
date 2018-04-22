@@ -66,6 +66,10 @@ function filterGallery(type){
   }
 }
 
+function toggleMenu() {
+  $('#menu-overlay').fadeToggle(200, 'swing');
+}
+
 $(document).ready(()=>{
   $('.gallery-item').click(event=>{
     $(event.currentTarget).toggleClass('selected');
