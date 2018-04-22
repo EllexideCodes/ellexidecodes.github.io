@@ -187,7 +187,7 @@ body:hover::-webkit-scrollbar-thumb {
 }
 
 .burger::after {
-  bottom: -.6em;
+  bottom: -.5em;
 }
 
 #menu-overlay:target {
