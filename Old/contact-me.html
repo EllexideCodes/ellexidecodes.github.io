@@ -3,22 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta content="Contact/Support for E.C. Products" name="description">
-  <meta content="rpc layouts profiles Ellexide EllexideCodes website roleplay contact me" name="keywords">
+  <meta content="Contact Ellexide Codes" name="description">
+  <meta content="Contact Ellexide EllexideCodes rpc roleplay profile layouts character" name="keywords">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Contact Me | Ellexide Codes</title>
-  <!-- links -->
-  <link href="https://i.imgur.com/04V66cS.png" rel="icon">
-  <!-- styles -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="font-mfizz-2.4.1/font-mfizz.css">
-  <link rel="stylesheet" href="stylesheets/homepage-two.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
-  <link rel="stylesheet" href="stylesheets/forms-two.css">
-  <!-- scripts -->
-  <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
+  <link href="https://i.imgur.com/04V66cS.png" rel="icon">
+  <link href="./stylesheets/loader.css" rel="stylesheet" media="screen">
+  <link href="./stylesheets/base.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./stylesheets/forms.css">
   <script src="./scripts/functions.js"></script>
+  <script src='https://rawgit.com/EllexideCodes/Profile-Codes/master/repeatedEffects/tooltip.js'></script>
+  <script src="./scripts/credit.js"></script>
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-118006118-1"></script>
 <script>
@@ -28,67 +25,83 @@
 
   gtag('config', 'UA-118006118-1');
 </script>
+
 </head>
-<body>
-<!-- generic background -->
-<div id="particles-js"></div>
-
-<script src="./scripts/particles.js"></script>
-
-<!-- website start -->
-<div class="content">
-  <!-- header -->
-  <h1 class="title">Contact Me</h1>
-
-  <div class="ham" onclick="toggleMenu()"><div class="burger"></div></div>
-  <!-- actual menu -->
-  <div id="menu-overlay">
-    <div class="menu-exit" onclick="toggleMenu()"></div>
-    <div class="menu-slide menu">
-      <ul>
-        <a href="/"><li><span class="fa fa-home"></span> Home</li></a>
-        <a href="/disclaimers"><li><span class="fa fa-warning"></span> Disclaimers</li></a>
-        <li class="header">About</li>
-        <a href="./past-present"><li><span class="fa fa-clock-o"></span> Past & Present</li></a>
-        <a href="./hobbies"><li><span class="fa fa-gamepad"></span> Hobbies</li></a>
-        <li class="link" onclick="toggleLang()"><span class="fa fa-code"></span> Languages</li>
-        <div class="lang">
-          <ul>
-            <li><span class="icon-css3-alt"></span> CSS</li>
-            <li><span class="icon-html5-alt"></span> HTML</li>
-            <li><span class="icon-javascript-alt"></span> JS</li>
-          </ul>
-        </div>
-        <li class="header">Projects/Works</li>
-        <a href="https://derealised.xyz"><li><span class="fa fa-desktop"></span> Derealised</li></a>
-        <a href="./gallery"><li><span class="fa fa-image"></span> Layout Gallery</li></a>
-        <a href="./contact-me"><li><span class="fa fa-envelope"></span> Contact Me</li></a>
-        <a href="https://paypal.me/Ellexide" target="_blank"><li><span class="fa fa-money"></span> Donate</li></a>
-        <li style="text-align: center; color: #666;font-size: .6em; position: absolute; bottom: 2em;margin-left: -.5em">&copy; Copyright 2018 || Ellexide Codes</li>
-      </ul>
+<body onload="loader()">
+  <div class="wrap" id="loader">
+    <div class="bg">
+      <div class="loading">
+        <span class="title">loading layouts</span>
+        <span class="text">building gallery</span>
+      </div>
     </div>
   </div>
-  <!-- content -->
-  <div class="nav" style="margin-bottom: 50px">
-    <ul>
-      <li class="link" onclick="pullForm('#commissionForm');">Commission</li>
-      <span>|</span>
-      <li class="link" onclick="pullForm('#requestForm');">Request</li>
-      <span>|</span>
-      <li class="link" onclick="pullForm('#addonForm');">Profile Add Ons</li>
-      <span>|</span>
-      <li class="link" onclick="pullForm('#profileForm');">Profile Edit</li>
-      <span>|</span>
-      <li class="link" onclick="pullForm('#pictureForm');">Picture Render</li>
-      <span>|</span>
-      <li>Troubleshoot</li>
-    </ul>
-  </div>
-  <div class="cut"></div>
-  <div class="desc pad">
+  
+<div id="page">
+<div id="back"></div>
+  <div id="content">
+<nav class="menu">
+<input type="checkbox" href="#" class="menu-open" name="menu-open" id="menu-open"/>
+<label class="menu-open-button" for="menu-open">
+<span class="hamburger hamburger-1"></span>
+<span class="hamburger hamburger-2"></span>
+<span class="hamburger hamburger-3"></span>
+</label>
+
+<a href="./codes" class="menu-item"> <i class="fa fa-code"></i> </a>
+<a href="./frequently-asked-questions" class="menu-item"> <i class="fa fa-question"></i> </a>
+<a href="./terms_of_service" class="menu-item"> <i class="fa fa-warning"></i> </a>
+<a href="./about" class="menu-item"> <i class="fa fa-info"></i> </a>
+<a href="/" class="menu-item"> <i class="fa fa-home"></i> </a>,
+
+</nav>
+
+
+<!-- filters -->
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+<defs>
+<filter id="shadowed-goo">
+
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+<feGaussianBlur in="goo" stdDeviation="3" result="shadow" />
+<feColorMatrix in="shadow" mode="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1 -0.2" result="shadow" />
+<feOffset in="shadow" dx="1" dy="1" result="shadow" />
+<feBlend in2="shadow" in="goo" result="goo" />
+<feBlend in2="goo" in="SourceGraphic" result="mix" />
+</filter>
+<filter id="goo">
+<feGaussianBlur in="SourceGraphic" result="blur" stdDeviation="10" />
+<feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+<feBlend in2="goo" in="SourceGraphic" result="mix" />
+</filter>
+</defs>
+</svg>
+
+<div id="newsletter">
+  <h1>Obtain E.C. Products</h1>
+
+  <!-- TOPIC SELECT -->
+  <div class="dropdown">
+      <button id="selectTopic" class="dropbtn">Select your topic</button>
+      <div class="dropdown-content">
+        <div class="item tooltip" title="Commission a profile" onclick="pullForm('#commissionForm')">Commission</div>
+        <div class="item tooltip" title="Send in a request" onclick="pullForm('#requestForm')">Request</div>
+        <div class="item tooltip" title="Send in a request for a specific profile add on" onclick="pullForm('#addonForm')">Profile Add On</div>
+        <div class="item tooltip" title="render a photo, turn multiple photos into a gif, or minor gif manipulation" onclick="pullForm('#pictureForm')">Picture Render</div>
+        <div class="item tooltip" title="This doesn't have to be an E.C. Product. If you somehow cannot contact the original author, I am happy to help in their stead." onclick="pullForm('#profileForm')">Profile Edit</div>
+        <div class="item tooltip" title="Have specific question not in FAQs?" onclick="pullForm('#askForm')">Inquiry</div>
+      </div>
+    </div>
+
+  <!--
+    ===================
+    ****** FORMS ******
+    ===================
+  -->
+
   <!-- COMMISSION FORM -->
   <form class="form" id="commissionForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
-    <h2>Commission Form</h2>
     <input type="hidden" name="_subject" value="New Commission!" />
     <fieldset>
       <legend>Contact Information:</legend>
@@ -122,7 +135,6 @@
 
   <!-- REQUEST FORM -->
   <form class="form" id="requestForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
-    <h2>Request Form</h2>
     <input type="hidden" name="_subject" value="New Request!" />
     <fieldset>
       <legend>Contact Information:</legend>
@@ -154,7 +166,6 @@
 
   <!-- PROFILE ADD ON -->
   <form class="form" id="addonForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
-    <h2>Profile Add On/s</h2>
     <input type="hidden" name="_subject" value="Profile Add On" />
     <fieldset>
       <legend>Contact Information:</legend>
@@ -186,7 +197,6 @@
 
   <!-- PICTURE RENDER -->
   <form class="form" id="pictureForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
-    <h2>Picture Render</h2>
     <input type="hidden" name="_subject" value="New Picture" />
     <fieldset>
       <legend>Contact Information:</legend>
@@ -218,11 +228,10 @@
 
   <!-- PROFILE EDIT -->
   <form class="form" id="profileForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
-    <h2>Profile Edit/s</h2>
     <input type="hidden" name="_subject" value="Profile Edit" />
     <fieldset>
       <legend>Contact Information:</legend>
-        <b>NAME:</b> 
+        <b>NAME:</b> <br>
       <input type="text" name="name" placeholder="Your Name" required><br>
         <b>E-MAIL:</b> <br>
       <input type="email" name="email" placeholder="Your Email" required><br>
@@ -246,67 +255,89 @@
   <button type="submit">Send</button>
   </form>
 
-  </div>
-  <div class="cut"></div>
-
-  <!-- troubleshooting -->
-  <div class="desc pad">
-      <h2>Troubleshooting</h2>
-      <form action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Troubleshoot" />
-        <fieldset>
-          <legend>Contact Information:</legend>
-            <b>NAME:</b> <br>
-          <input type="text" name="name" placeholder="Your Name" required><br>
-            <b>E-MAIL:</b> <br>
-          <input type="email" name="email" placeholder="Your Email" required><br>
-            <b>DISCORD:</b> <i>[optional]</i> <br>
-          <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
-        </fieldset>
-    
-        <fieldset>
-          <legend>Troubleshooting Information:</legend>
-            <b>TOPIC:</b> <br>
-          <div class="topic">Troubleshoot</div>
-            <b>TYPE OF CODE:</b> <br>
-          <label class="container"> Commissioned
-            <input type="radio" name="code-type" value="commissioned">
-            <span class="circle"></span>
-          </label>
-          <label class="container"> Requested
-            <input type="radio" name="code-type" value="requested">
-            <span class="circle"></span>
-          </label>
-          <label class="container"> Premade
-            <input type="radio" name="code-type" value="pre-made">
-            <span class="circle"></span>
-          </label>
-          <label class="container"> Raffle
-            <input type="radio" name="code-type" value="raffle">
-            <span class="circle"></span>
-          </label> <br>
-            <b>PROBLEM:</b> <br>
-          <textarea name="message" placeholder="Please state the nature of your problem" required></textarea>
-        </fieldset>
-      <input type="text" name="_gotcha" style="display:none" />
-      <input type="hidden" name="_next" value="./thanks.html" />
-      <button type="submit">Send</button>
-      </form>
-  </div>
-  <div class='cut'></div>
 
 
-  <!-- general contact info -->
-  <div class="desc pad">
-    <h2>General Contact Information</h2>
-    <p>
-      Please do not spread the information given. Preferably contact me through the forms so I know right off the bat what kind of inquiry you have but if it is an urgent matter, contact me through the following mediums: 
-      <ul>
-        <li><b>E-MAIL:</b> <a href="mailto:ellexidecodes@gmail.com">ellexidecodes@gmail.com</a></li>
-        <li><b>DISCORD:</b> Lil Monster#3557</li>
-        <li><b>RPC:</b> <a href="https://roleplay.chat/profile.php?user=Ellexide" target="_blank">Ellexide</a></li>
-      </ul>
-    </p>
+  <!-- INQUIRY FORM -->
+  <form class="form" id="askForm" action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Inquiry" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Other Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Inquiry</div>
+        <b>QUESTION/INQUIRY:</b> <br>
+      <textarea name="message" placeholder="How can I help you?" required></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <input type="hidden" name="_next" value="./thanks.html" />
+  <button type="submit">Send</button>
+  </form>
+
+
+  
+  <!-- TROUBLESHOOTING -->
+  <h1>Troubleshooting</h1>
+  <form action="https://formspree.io/ellexidecodes@gmail.com" method="POST">
+    <input type="hidden" name="_subject" value="Troubleshoot" />
+    <fieldset>
+      <legend>Contact Information:</legend>
+        <b>NAME:</b> <br>
+      <input type="text" name="name" placeholder="Your Name" required><br>
+        <b>E-MAIL:</b> <br>
+      <input type="email" name="email" placeholder="Your Email" required><br>
+        <b>DISCORD:</b> <i>[optional]</i> <br>
+      <input type="text" name="discord" placeholder="Your Discord Tag"> <br>
+    </fieldset>
+
+    <fieldset>
+      <legend>Troubleshooting Information:</legend>
+        <b>TOPIC:</b> <br>
+      <div class="topic">Troubleshoot</div>
+        <b>TYPE OF CODE:</b> <br>
+      <label class="container"> Commissioned
+        <input type="radio" name="code-type" value="commissioned">
+        <span class="circle"></span>
+      </label>
+      <label class="container"> Requested
+        <input type="radio" name="code-type" value="requested">
+        <span class="circle"></span>
+      </label>
+      <label class="container"> Premade
+        <input type="radio" name="code-type" value="pre-made">
+        <span class="circle"></span>
+      </label>
+      <label class="container"> Raffle
+        <input type="radio" name="code-type" value="raffle">
+        <span class="circle"></span>
+      </label> <br>
+        <b>PROBLEM:</b> <br>
+      <textarea name="message" placeholder="Please state the nature of your problem" required></textarea>
+    </fieldset>
+  <input type="text" name="_gotcha" style="display:none" />
+  <input type="hidden" name="_next" value="./thanks.html" />
+  <button type="submit">Send</button>
+  </form>
+  
+  
+    <h1>General Contact Information</h1>
+  <p>Here are the list of places where you can contact me. <i>Please note that you have more luck with a cohesive and detailed reply filling out the forms.</i> My replies on other accounts will be lighter and quick as I am almost always on the move.</p>
+  <p>
+    <b>RPC MAIL TO:</b> <a href="https://roleplay.chat/profile.php?user=Ellexide" target="_blank">Ellexide</a> <br>
+    <b>DISCORD:</b> Lil Monster#3557 <br>
+    <b>E-MAIL:</b> <a href="mailto:ellexidecodes@gmail.com">ellexidecodes@gmail.com</a>
+  </p>
+</div>
+
+<div class="footer">&copy; Copyright 2018 || Ellexide Codes</div>
   </div>
 </div>
 </body>

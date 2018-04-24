@@ -12,11 +12,21 @@
   <!-- styles -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="font-mfizz-2.4.1/font-mfizz.css">
   <link rel="stylesheet" href="stylesheets/homepage-two.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
   <!-- scripts -->
   <script src='https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js'></script>
   <script src="./scripts/functions.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-118006118-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-118006118-1');
+</script>
 </head>
 <body>
 <!-- generic background -->
@@ -31,15 +41,28 @@
 
   <div class="ham" onclick="toggleMenu()"><div class="burger"></div></div>
   <!-- actual menu -->
-  <div id="menu-overlay" onclick="toggleMenu()">
+  <div id="menu-overlay">
+    <div class="menu-exit" onclick="toggleMenu()"></div>
     <div class="menu-slide menu">
       <ul>
         <a href="/"><li><span class="fa fa-home"></span> Home</li></a>
-        <a href="./about"><li><span class="fa fa-info info"></span> About</li></a>
-        <a href="./terms_of_service"><li><span class="fa fa-warning"></span> TOS</li></a>
-        <a href="./codes"><li><span class="fa fa-code"></span> Gallery</li></a>
+        <a href="/disclaimers"><li><span class="fa fa-warning"></span> Disclaimers</li></a>
+        <li class="header">About</li>
+        <a href="./past-present"><li><span class="fa fa-clock-o"></span> Past & Present</li></a>
+        <a href="./hobbies"><li><span class="fa fa-gamepad"></span> Hobbies</li></a>
+        <li class="link" onclick="toggleLang()"><span class="fa fa-code"></span> Languages</li>
+        <div class="lang">
+          <ul>
+            <li><span class="icon-css3-alt"></span> CSS</li>
+            <li><span class="icon-html5-alt"></span> HTML</li>
+            <li><span class="icon-javascript-alt"></span> JS</li>
+          </ul>
+        </div>
+        <li class="header">Projects/Works</li>
+        <a href="https://derealised.xyz"><li><span class="fa fa-desktop"></span> Derealised</li></a>
+        <a href="./gallery"><li><span class="fa fa-image"></span> Layout Gallery</li></a>
         <a href="./contact-me"><li><span class="fa fa-envelope"></span> Contact Me</li></a>
-        <a href="https://paypal.me/Ellexide"><li><span class="fa fa-money"></span> Donate</li></a>
+        <a href="https://paypal.me/Ellexide" target="_blank"><li><span class="fa fa-money"></span> Donate</li></a>
         <li style="text-align: center; color: #666;font-size: .6em; position: absolute; bottom: 2em;margin-left: -.5em">&copy; Copyright 2018 || Ellexide Codes</li>
       </ul>
     </div>
@@ -67,12 +90,25 @@
     <p>
       Having a website of my own makes it easy for you to navigate as well as for me to arrange. I know there has been some fuss to know which codes are free and which aren't. <i>Fear not!</i> I am going to make it super easy for you to pick which is which now!
     </p>
+  </div>
+  <div class="cut"></div>
+  <div class="desc pad">
+    <h2>Announcements</h2>
     <p>
-      <b>P.S.:</b> Yeah, I know the landing looks <i>completely</i> different than the rest of the website. That is because I started and finished coding one type of aesthetic and realized I did not like the way it looked. Which is why I am slowly turning the pages 
-      to a different theme--<b>Minimalistic</b>. For now, please bear with me as I go through each page and fix them up.
+      My commissions are now back open! Please check out the <a href="/gallery">gallery</a> to see what kinds of layouts I have previously made. If you can observe, my codes more or less improve as time goes by [the very top being the latest] as I have promised to continue to learn programming to give you better outputs!
+    </p>
+    <p>
+      I would like to remind all of my patrons that I can most definitely improve a commissioned code. If it's a simple upgrade, I will do it for <b>free</b> but if it's a bit more complex, you simply need to pay a smaller fee based on the kind of improvement you want.
+    </p>
+    <p>
+      It's cheaper because I already have a base-code to work with and I wouldn't have to start from scratch~
+    </p>
+    <p>
+      <b>P.S.:</b> All announcements and updates will be posted on the homepage according to a timeline. If it get's lengthy, I might put up a blog page instead so you're not drowning! Tell me what you think~
     </p>
   </div>
   <div class="cut"></div>
+  <div class="desc logo"></div>
 </div>
 </body>
 </html>

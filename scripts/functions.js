@@ -8,48 +8,27 @@ function showPage() {
 }
 
 function pullForm(id) {
-  var button = document.getElementById('selectTopic');
   $('.form').hide();
   if($(id).is(':visible')) return;
   $(id).show();
-  switch (id) {
-    case '#commissionForm':
-    button.innerHTML = 'Commission';
-    break;
-   
-    case '#requestForm':
-    button.innerHTML = 'Request';
-    break;
-    
-    case '#addonForm':
-    button.innerHTML = 'Profile Add On';
-    break;
-    
-    case '#pictureForm':
-    button.innerHTML = 'Photo Manipulation';
-    break;
+  select(event);
+}
 
-    case '#profileForm':
-    button.innerHTML = 'Profile Edit';
-    break;
-
-    case '#askForm':
-    button.innerHTML = 'Inquiry';
-    break;
-
-    default:
-    button.innerHTML = 'Select a topic';
-  }
+function select(event) {
+  if($(event.currentTarget).hasClass('selected')) return;
+  
+  $('li.link').removeClass('selected');
+  $(event.currentTarget).addClass('selected');
 }
 
 function filterGallery(type){
-  var boi = $('.circle.'+type);
+  var boi = $('.link.'+type);
   if(boi.hasClass('selected')) {
     boi.removeClass('selected');
     $('.gallery-item').show();
   } else {
     var thisClass;
-    $('.circle').removeClass('selected');
+    $('.link').removeClass('selected');
     boi.addClass('selected');
     if(boi.hasClass('commission')) {
       thisClass = 'commission';
@@ -70,14 +49,51 @@ function toggleMenu() {
   $('#menu-overlay').fadeToggle(200, 'swing');
 }
 
-$(document).ready(()=>{
-  $('.gallery-item').click(event=>{
-    $(event.currentTarget).toggleClass('selected');
-    $('.shadow').toggle();
-  })
+function toggleLang() {
+  $('.lang').slideToggle();
+}
 
-  $('.shadow').click(()=>{
-    $('.gallery-item').removeClass('selected');
-    $('.shadow').hide();
+function toggleGallery() {
+  $('#gallery-overlay').fadeToggle(200, 'swing');
+}
+
+$(document).ready(()=>{
+  $('.gallery-item').click((event)=>{
+    var src = $(event.currentTarget).find('img').attr('src');
+    var preview;
+    var code;
+
+    if (!$(event.currentTarget).find('img').attr('preview') && !$(event.currentTarget).find('img').attr('code')) {
+      $('#gallery-overlay').show();
+      $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
+      $('a.code').attr('href', '#');
+      $('a.preview').attr('href', '#');
+      $('a.preview').attr('title', 'No preview available');
+      $('a.code').attr('title', 'No code available');
+    } else if (!$(event.currentTarget).find('img').attr('code')) {
+      preview = $(event.currentTarget).find('img').attr('preview');
+
+      $('#gallery-overlay').show();
+      $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
+      $('a.preview').attr('href', preview);
+      $('a.code').attr('href', '#');
+      $('a.code').attr('title', 'No code available');
+    } else if (!$(event.currentTarget).find('img').attr('preview')) {
+      code = $(event.currentTarget).find('img').attr('code');
+
+      $('#gallery-overlay').show();
+      $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
+      $('a.preview').attr('href', '#');
+      $('a.preview').attr('title', 'No preview available');
+      $('a.code').attr('href', code);
+    } else {
+      preview = $(event.currentTarget).find('img').attr('preview');
+      code = $(event.currentTarget).find('img').attr('code');
+
+      $('#gallery-overlay').show();
+      $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
+      $('a.preview').attr('href', preview);
+      $('a.code').attr('href', code);
+    }
   })
 })

@@ -50,6 +50,8 @@ body:hover::-webkit-scrollbar-thumb {
   -ms-user-select: none;
 }
 
+
+/* -- background -- */
 #particles-js {
   background: transparent;
   pointer-events: none;
@@ -69,6 +71,7 @@ body:hover::-webkit-scrollbar-thumb {
   position: relative;
 }
 
+/* -- titles and headers -- */
 .title {
   letter-spacing: .2em;
   font-weight: 200;
@@ -89,6 +92,21 @@ body:hover::-webkit-scrollbar-thumb {
   content: " />"
 }
 
+.menu ul li.header {
+  background: #616161;
+  padding: .8em;
+  padding-left: 1em;
+  width: 96.5%;
+  margin-left: -1em;
+  color: #ccc;
+  font-size: 1.2em;
+  border-right: 2px solid #ff96ff;
+}
+
+h1{font-weight: 200;font-size: 1.8em}
+
+h2{font-weight:200;font-size: 1.4em;}
+
 .cut {
   height: 2px;
   width: 30%;
@@ -108,26 +126,24 @@ body:hover::-webkit-scrollbar-thumb {
   padding: 10px;
 }
 
-.nav ul a {
+.nav a {
   color: #333;
   text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
-.nav ul li:hover a {
-  color: #410909;
-  font-weight: bold;
-  letter-spacing: .2em;
+.nav a:hover {
+  letter-spacing: .1em;
 }
 
 .menu ul {
   list-style: none;
-  font-size: 1.3em;
+  font-size: 1.1em;
   font-weight: 200px;
   text-transform: uppercase;
   display: flex;
   flex-direction: column;
-  margin-top: 5em;
+  margin-top: 1em;
   margin-left: .5em;
   padding: 10px;
 }
@@ -137,23 +153,49 @@ body:hover::-webkit-scrollbar-thumb {
 }
 
 .menu ul li span {
-  margin-right: 2em;
+  margin-right: .7em;
 }
 
 .info {
   margin-left: .3em;
-  margin-right: 2.2em !important;
+  margin-right: 1em !important;
 }
 
-.menu ul a {
+.menu ul a, .menu ul li.link {
   color: #ccc;
   text-decoration: none;
   text-align: left;
   transition: all .4s ease-in-out;
+  cursor: pointer;
 }
 
-.menu ul a:hover {
-  letter-spacing: 0.2em;
+.menu ul a:hover, .menu ul li.link:hover {
+  letter-spacing: 0.1em;
+}
+
+.lang {
+  display: none;
+  position: fixed;
+  left: 102%;
+  top: 37%;
+  border: 1px solid #ccc;
+  width: 50%;
+}
+
+.lang ul {
+  background-color: #aaa;
+  width: 100%;
+  padding: 0;
+  margin-top: 0;
+  margin-left: 0;
+}
+
+.lang ul li {
+  border-bottom: 1px solid #888;
+  width: calc(100%-1em);
+  padding: .5em;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .ham {
@@ -205,6 +247,14 @@ body:hover::-webkit-scrollbar-thumb {
   display: none;
 }
 
+.menu-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
 .menu-slide {
   position: absolute;
   top: 0;
@@ -222,8 +272,6 @@ body:hover::-webkit-scrollbar-thumb {
   to {transform: translateX(0)}
 }
 
-h1{font-weight: 200;font-size: 1.8em}
-
 .desc {
   font-size: 1.1em;
   text-align: center;
@@ -232,4 +280,46 @@ h1{font-weight: 200;font-size: 1.8em}
 .pad {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.logo {
+  height: 60px;
+  background-image: url(../assets/logo-grey-back.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 4em;
+  margin-top: 40px;
+}
+
+.desc a {
+  text-decoration: none;
+  border-bottom: 1px dotted #333;
+  color: inherit;
+}
+
+.desc a:hover {
+  border-bottom-style: solid;
+}
+
+div.tooltipMessage {
+  z-index: 9001;
+  position: absolute;
+  max-width: 25%;
+  text-align: center;
+  background: #eee;
+  border: 1px solid  #333;
+  padding: 5px;
+  font-size:  .8em;
+  font-weight:  200;
+  color:  #333;
+}
+
+div.tooltipMessage > span {
+  display: inline-block;
+}
+
+div.tooltipMessage.left > span {float: right;}
+
+ul.info {
+  list-style: none;
 }
