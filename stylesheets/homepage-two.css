@@ -5,6 +5,7 @@ html, body {
 
 html {
   overflow: auto;
+  scroll-behavior: smooth;
 }
 
 body {
