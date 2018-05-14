@@ -67,6 +67,7 @@ $(document).ready(()=>{
       $('#gallery-overlay').show();
       $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
       $('a.code').attr('href', '#');
+      $('a.code, a.preview').removeAttr('target');
       $('a.preview').attr('href', '#');
       $('a.preview').attr('title', 'No preview available');
       $('a.code').attr('title', 'No code available');
@@ -76,6 +77,8 @@ $(document).ready(()=>{
       $('#gallery-overlay').show();
       $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
       $('a.preview').attr('href', preview);
+      $('a.preview').attr('target', '_blank');
+      $('a.code').removeAttr('target');
       $('a.code').attr('href', '#');
       $('a.code').attr('title', 'No code available');
     } else if (!$(event.currentTarget).find('img').attr('preview')) {
@@ -85,7 +88,9 @@ $(document).ready(()=>{
       $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
       $('a.preview').attr('href', '#');
       $('a.preview').attr('title', 'No preview available');
+      $('a.preview').removeAttr('target');
       $('a.code').attr('href', code);
+      $('a.code').attr('target', '_blank');
     } else {
       preview = $(event.currentTarget).find('img').attr('preview');
       code = $(event.currentTarget).find('img').attr('code');
@@ -94,6 +99,7 @@ $(document).ready(()=>{
       $('#gallery-overlay .img').css('background-image', 'url(' + src + ')');
       $('a.preview').attr('href', preview);
       $('a.code').attr('href', code);
+      $('a.code, a.preview').attr('target', '_blank');
     }
   })
 })
