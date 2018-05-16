@@ -101,5 +101,5 @@ $(document).ready(()=>{
       $('a.code').attr('href', code);
       $('a.code, a.preview').attr('target', '_blank');
     }
-  })
-})
+  });
+});
