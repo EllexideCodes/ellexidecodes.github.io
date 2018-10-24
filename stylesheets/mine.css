@@ -1,0 +1,410 @@
+/* fonts */
+@import "https://ellexidecodes.github.io/Profile-Codes/free/all-google-fonts.css";
+@import url('https://fonts.googleapis.com/css?family=Charmonman:400,700');
+
+/* start here */
+* {
+ -webkit-user-drag: none;
+}
+
+::-webkit-scrollbar { display: none }
+::selection { color: peachpuff; background: hotpink}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5vh;
+  /*background: linear-gradient(to bottom right, #5a4183, #b191e7);*/
+  background: linear-gradient(to bottom right, #5a4183, #b191e7);
+  height: 100vh;
+  overflow:hidden;
+}
+
+.overlayPattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 300%;
+  width: 300%;
+  background: url(https://ellexidecodes.github.io/assets/discord-background.svg) center/40vh;
+  filter: blur(0.3vh);
+  opacity: 0.9;
+  animation: slide 30s linear infinite forwards;
+}
+
+@keyframes slide {
+  to {
+    top: -200%;
+    left: -200%;
+  }
+}
+
+.title {
+  position: absolute;
+  top: 7%;
+  left: 50%;
+  transform: translateX(-50%);
+  letter-spacing: 2vh;
+  color: #ccc;
+  font-weight: 300;
+  font-size: 5vh;
+}
+
+.title::before {
+  content: '< '
+}
+
+.title::after {
+  content: ' />'
+}
+
+.bam {
+  position: absolute;
+  -webkit-mask-image: url(https://ellexidecodes.github.io/assets/logo-grey-back.svg);
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  background: url(https://media.giphy.com/media/ZzyOiywrAjnXi/giphy.gif) top center/300% no-repeat;
+  /*animation: henlo 2s linear forwards 1s;*/
+  bottom: 3.5%;
+    left: 6.5%;
+    height: 20vh;
+    width: 20vh;
+    z-index: 999;
+    pointer-events: none;
+}
+
+@keyframes henlo {
+  0% {
+    height: 50vh;
+    width: 50vh;
+    top: -50vh;
+    left: 50%;
+    transform: translateX(-50%), scale(1, 1);
+  }
+
+  20% {
+    height: 50vh;
+    width: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1.1, 0.9);
+  }
+
+  24% {
+    height: 50vh;
+    width: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.9, 1.1);
+  }
+
+  28%, 80% {
+    height: 50vh;
+    width: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1, 1); 
+  }
+
+  100% {
+    top: 5%;
+    left: 5%;
+    height: 25vh;
+    width: 25vh;
+  }
+}
+
+.container {
+  position: absolute;
+  top: 18%;
+  left: 5%;
+  height: 77%;
+  width: 90%;
+  border: 0.1vh solid black;
+  background: linear-gradient(to bottom right, #6583b9, #8bb2fa);
+  border-radius: 3vh;
+}
+
+.container .overlay {
+  position: absolute;
+  top: 0.1vh;
+  left: 0.1vh;
+  height: calc(100% - 0.2vh);
+  width: calc(100% - 0.2vh);
+  -webkit-mask-image: url(https://ellexidecodes.github.io/assets/nitro-background.svg);
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  background: linear-gradient(to bottom right, #5a81ca, #3c5480);
+  border-radius: 3vh;
+}
+
+.tabs {
+  position: absolute;
+  top: 1%;
+  left: 2%;
+  height: 65%;
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+
+.tab {
+  width: 90%;
+  height: 13vh;
+  border-radius: 3vh;
+  border: 0.1vh solid #160216;
+  background: linear-gradient(to bottom right, #aa8ae2, #7557a8);
+  margin: 1vh 0;
+  position: relative;
+  color: peachpuff;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: font-size .1s ease-in-out, font-weight .1s ease-in-out, filter .1s ease-in-out;
+}
+
+.tab:hover {
+  font-size: 2.7vh;
+  font-weight: lighter;
+  filter: drop-shadow(0vh 0.8vh 0.5vh black);
+}
+
+.tab::after {
+  content: '';
+  position: absolute;
+  top: 0.1vh;
+  left: 0.1vh;
+  height: calc(100% - 0.1vh);
+  width: calc(100% - 0.1vh);
+  background: url(https://ellexidecodes.github.io/assets/discord-background.svg) center/90%;
+  -webkit-mask-image: linear-gradient(to left, transparent 30%, black);
+  pointer-events: none;
+  filter: invert(100%);
+  border-radius: 3vh;
+}
+
+.contentBox {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 50%;
+  height: 90%;
+  display: none;
+}
+
+.smallerBox {
+  position: absolute;
+  top: 5%;
+  right: 57%;
+  width: 20%;
+  height: 90%;
+}
+
+.innerBox {
+  background: rgba(9, 12, 19, 0.5);
+  box-shadow: inset .5vh .5vh 5vh black;
+  border: 0.5vh solid transparent;
+  border-color: rgba(115, 155, 230, 0.7) transparent transparent rgba(115, 155, 230, 0.7);
+  box-sizing: border-box;
+  border-radius: 3vh;
+  overflow: auto;
+  padding: 2vh;
+  font-family: 'Patrick Hand SC', sans-serif;
+  color: rgb(153, 175, 197);
+  font-size: 3vh;
+}
+
+#gallery .inner {
+  position: absolute;
+  top: 2vh;
+  left: 2vh;
+  height: calc(100% - 4vh);
+  width: calc(100% - 4vh);
+  border-radius: 3vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.gallerySettings {
+  position: absolute;
+  height: 15%;
+  left: 2.5%;
+  width: 19%;
+  bottom: 22%;
+  animation: appear .5s linear;
+  transform: none;
+  display: none;
+}
+
+.gallerySettings .inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0)
+  }
+}
+
+.gallerySettings .tab {
+  max-width: 41%;
+  height: 40%;
+  border: 1px solid white;
+  margin: 1% 3%;
+  color: peachpuff;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: bolder;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 2vh;
+  transition: all .2s ease-in-out;
+}
+
+.gallerySettings .tab.selected {
+  background: linear-gradient(to bottom right, #3c2e53, #d398ac);
+  border-color: black;
+}
+
+.profile {
+  background-color: #aaa;
+  margin-top: 1vh;
+  height: 20vh;
+  width: 35vh;
+  border: 0.5vh solid #aaa;
+  transition: all ease 0.5s;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#gallery-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0,0,0,0.8);
+  z-index: 1000;
+  display: none;
+}
+
+.gallery-exit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.img ~ .source {
+  position: absolute;
+  max-height: 80%;
+  max-width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  background: rgba(0,0,0,0.9);
+  opacity: 0;
+  color: peachpuff;
+  transition: opacity .2s ease-in-out;
+}
+
+.source:hover {
+  opacity: 1;
+}
+
+.img {
+  position: absolute;
+  max-height: 80%;
+  max-width: 80%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid #ccc;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0px 4px 30px #111;
+  color: transparent;
+  overflow: hidden;
+}
+
+.source ul {
+  list-style-type: none;
+  font-size: 1em;
+  font-weight: 200;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 10px;
+  margin-top: 25%;
+  margin-left: 50%;
+  transform: translate(-50%, -40%);
+  pointer-events: all;
+}
+
+hr {
+  color: white;
+  opacity: 0.3;
+}
+
+h1 {
+  color: #e797cf;
+  font-family: 'Meddon', cursive;
+  text-transform: lowercase;
+  font-size: 4vh;
+  line-height: 4vh;
+}
+
+h2 {
+  font-size: 4vh;
+  line-height: 4vh;
+  color: #7e96e2;
+  text-shadow: 1px 0px #0a163b, 0px 1px #0a163b, -1px 0px #0a163b, 0px -1px #0a163b;
+}
+
+a {
+  color: #a781ff;
+}
+
+.coderbois {
+  text-align: center;
+  font-weight: 700;
+}
+
+.coderbois a {
+  text-decoration: none;
+}
+
+.contentBox h1 {
+  text-align: right;
+}
+
+span {
+  color: #fd6e6e; 
+  font-weight: 700
+}
