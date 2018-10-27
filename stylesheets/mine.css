@@ -407,6 +407,15 @@ h2 {
   text-shadow: 1px 0px #0a163b, 0px 1px #0a163b, -1px 0px #0a163b, 0px -1px #0a163b;
 }
 
+b {
+  color: palevioletred;
+}
+
+u {
+  color: darksalmon;
+  text-decoration-style: wavy;
+}
+
 a {
   color: #a781ff;
 }
