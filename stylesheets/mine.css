@@ -217,7 +217,7 @@ body {
   overflow: auto;
   padding: 2vh;
   font-family: 'Patrick Hand SC', sans-serif;
-  color: rgb(153, 175, 197);
+  color: #99afc5;
   font-size: 3vh;
 }
 
@@ -372,6 +372,26 @@ hr {
   opacity: 0.3;
 }
 
+div.tooltipMessage {
+  font-family: 'Patrick Hand SC', sans-serif;
+  z-index: 9001;
+  position: absolute;
+  max-width: 25%;
+  text-align: center;
+  background: #2a426e;
+  border: 0.3px solid #0c1525;
+  padding: 2vh;
+  font-size:  2.5vh;
+  font-weight:  200;
+  color:  #99afc5;
+}
+
+div.tooltipMessage > span {
+  display: inline-block;
+}
+
+div.tooltipMessage.left > span {float: right;}
+
 h1 {
   color: #e797cf;
   font-family: 'Meddon', cursive;
@@ -385,15 +405,6 @@ h2 {
   line-height: 4vh;
   color: #7e96e2;
   text-shadow: 1px 0px #0a163b, 0px 1px #0a163b, -1px 0px #0a163b, 0px -1px #0a163b;
-}
-
-b {
-  color: palevioletred;
-}
-
-u {
-  color: darksalmon;
-  text-decoration-style: wavy;
 }
 
 a {
@@ -413,7 +424,7 @@ a {
   text-align: right;
 }
 
-span {
+.innerBox span {
   color: #fd6e6e; 
   font-weight: 700
 }
