@@ -1,0 +1,130 @@
+@import url(https://fontlibrary.org/face/unique); /* 'UniqueRegular' */
+
+ body {
+   overflow: auto;
+   background: linear-gradient(180deg, #7F6787, #574869);
+ }
+
+ ::-webkit-scrollbar {
+   width: 0.3vh;
+ }
+
+ ::-webkit-scrollbar-track {
+   background: transparent;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: transparent
+ }
+
+ * {
+   font-family: 'UniqueRegular'
+ }
+
+ #everything {
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   justify-content: center;
+ }
+
+ .colors {
+   color: #D79AB1;
+   /* plum */
+   color: #A7A7CB;
+   /* light steel blue */
+   color: #7F6787;
+   /* slate gray */
+   color: #574869;
+   /* dark slate blue */
+   color: #B58AA8;
+   /* rosy brown */
+ }
+
+ #title {
+   position: absolute;
+   top: 10%;
+   font-size: 5vw;
+   font-weight: bold;
+   color: #D79AB1;
+   width: 100%;
+   text-align: center;
+   text-shadow: 2px 0 white, 0px -2px white, -2px 0px white, 0px 2px white;
+ }
+
+ #shadow {
+   filter: drop-shadow(0vw 1vw 3px rgba(0, 0, 0, 0.5));
+ }
+
+ .content {
+   background: #eee;
+   border-radius: 20px;
+   padding: 40px;
+   position: absolute;
+   top: 25%;
+   width: 43%;
+   height: 50%;
+   left: 25.5%;
+   box-shadow: 0vw 1vw 1vw rgba(0, 0, 0, 0.5);
+   overflow: auto;
+ }
+
+ h1 {
+   color: #B58AA8;
+   width: 100%;
+   border-bottom: 2px dotted #B58AA8;
+   text-align: center
+ }
+
+ p {
+   color: transparent;
+   background-size: 100%;
+   background-image: linear-gradient(to right, #7F6787, #e27fa4, #574869);
+   background-image: -webkit-linear-gradient(left, #7F6787, #e27fa4, #574869);
+   background-clip: text;
+   -webkit-background-clip: text;
+   overflow: auto;
+   padding-top: 0;
+   text-align: center;
+ }
+
+ a {
+   color: #9ed8f0;
+   text-shadow: 1px 0px white, 0px -1px white, -1px 0px white, 0px 1px white;
+   transition-duration: 0.5s
+ }
+
+ a:hover {
+   color: #83b5ca;
+   text-shadow: none;
+ }
+
+ b {
+   color: #5b4c6d;
+ }
+
+ form {
+   color: transparent;
+   background-size: 100%;
+   background-image: linear-gradient(to right, #7F6787, #D79AB1, #574869);
+   background-image: -webkit-linear-gradient(left, #7F6787, #D79AB1, #574869);
+   background-clip: text;
+   -webkit-background-clip: text;
+   overflow: auto;
+   padding-top: 0;
+   text-align: center;
+   width: 100%;
+ }
+
+ #button {
+   position: relative;
+   margin-top: 1vw;
+   transform: scale(0.5);
+   width: 100%;
+ }
+
+ input:focus {
+   outline: 0;
+ }
