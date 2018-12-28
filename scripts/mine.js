@@ -28,7 +28,7 @@ $(document).ready(() => {
     $('#gallery-overlay').fadeIn('fast', 'swing');
   });
 
-  $('#gallery-overlay img').mouseenter(() => {
+  $('#gallery-overlay').mouseenter(() => {
     var thisImage = $('#gallery-overlay img');
     var code = thisImage.attr('code');
     var height = thisImage.height();
