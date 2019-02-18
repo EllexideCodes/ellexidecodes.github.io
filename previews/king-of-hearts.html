@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <title>The King of Hearts</title>
+      <style>
+      /*
+
+AUTHOR: Elle
+FOR: The King of Hearts [RPC Profile]
+LANGUAGE: CSS/HTML/JS
+
+
+######################----########-----------------########------------------######################
+######################----########-----------------########------------------######################
+######################----########-----------------########------------------######################
+########------------------########-----------------########------------------########
+########------------------########-----------------########------------------########
+######################----########-----------------########------------------######################
+######################----########-----------------########------------------######################
+######################----########-----------------########------------------######################
+########------------------########-----------------########------------------########
+########------------------########-----------------########------------------########
+######################----#####################----######################----######################
+######################----#####################----######################----######################
+######################----#####################----######################----######################
+
+
+============================================================================================================
+THE REST OF THE CODE IS KEPT IN MY FILE BUT IT WON'T AFFECT HOW YOUR PROFILE WILL LOOK. HERE ARE THE EDITABLE PORTIONS OF YOUR CODE. IT MAKES IT EASIER FOR YOU TO IGNORE THE PARTS OF THE CODE WHERE YOU REALLY CAN'T TOUCH BECAUSE IT MIGHT BREAK THE WHOLE THING. IT ALSO MAKES IT EASIER FOR ME TO FIX BUGS YOU MAY FIND.
+=============================================================================================================
+*/
+
+:root {
+  /* colors */
+  --background-color: #2e0e0e;
+  --tab-color: #ddd;
+  --friend-border-color: #111;
+
+  /* images */
+  --background-pattern: url(http://www.pptgrounds.com/wp-content/uploads/2012/10/Retro-Rose-Flowers-Pattern-Backgrounds.jpg);
+  --main-image: url(https://i.imgur.com/A4sNv8B.png);
+  --monitor-screen: url(https://i.imgur.com/E9UDRAm.png);
+
+  /* fonts */
+  --default-font: "Product Sans", sans-serif;
+  --tab-name-font: "Big Noodle Titling", sans-serif;
+  --friend-popout-name-font: "Big Noodle Titling", sans-serif;
+  --stats-font: 'Oswald', sans-serif;
+  --bold-font: 'Odachi', cursive;
+  --italics-font: 'Midnight in October', cursive;
+  --link-font: 'Uni Sans', sans-serif;
+  
+  
+  /* text styles */
+    /* -- text colors -- */
+  --stats-color: darkred;
+  --bold-color: darkred;
+  --link-color: crimson;
+  --link-color-hover: #ddd;
+  --default-font-color: #222;
+  --tab-text-color: #111;
+  --tab-text-selected-hover-color: darkred;
+  --friend-popout-name-color: #ddd;
+  --friend-popout-desc-color: #ddd;
+  --friend-popout-link-color: yellow;
+  --ooc-counter-color: darkred;
+
+    /* -- font sizes || please keep the font-sizes the same as much as possible or use vw and vh as unit,  not px -- */
+  --bold-font-size: 160%;
+  --italics-font-size: 150%;
+  --default-font-size: 2.5vh;
+  --tab-name-font-size: 2vw;
+  --mobile-tab-font-size: 2.3vh;
+}
+
+
+/*
+=======================================================================================================
+****** TROUBLESHOOTING: IF YOU NEED ANY HELP, MESSAGE ME ON DISCORD: Lil Monster#3557 ****
+=======================================================================================================
+*/
+
+      </style>
+    </head>
+    <body>
+      <!-- YOUR STYLESHEETS || DO NOT TOUCH -->
+      <link href="https://ellexidecodes.github.io/Profile-Codes/free/all-google-fonts.css" rel="stylesheet">
+      <link href="https://ellexidecodes.github.io/Profile-Codes/free/fancy-fonts.css" rel="stylesheet">
+      <link href="https://ellexidecodes.github.io/Profile-Codes/red/king-of-hearts.css" rel="stylesheet" >
+
+
+
+      <!-- profile start -->
+<div id="wholeProfile">
+
+  <!-- ============ introductory effects ============ -->
+  <div class="introTop">
+    <canvas class="hearts" id="canvas"></canvas>
+  </div>
+  <div class="introBottom"></div>
+  <div class="slash"></div>
+  
+  
+
+  <!-- ============ tab buttons ============ -->
+  <div class="tab one" opens="#dossier">
+    <h1>
+      DOSSIER
+    </h1>
+  </div>
+  <div class="tab two" opens="#history">
+    <h1>
+      History
+    </h1>
+  </div>
+  <div class="tab three" opens="#three">
+    <h1>
+      The King
+    </h1>
+  </div>
+  <div class="tab four" opens="#friends">
+    <h1>
+      Friends
+    </h1>
+  </div>
+  <div class="tab five" opens="#ooc">
+    <h1>Out of Character</h1>
+  </div>
+  
+  
+
+
+  <!-- ============ tab content ============ -->
+    <!-- tab one -->
+  <div class="whiteSlide" id="dossier">
+    <div class="scrollerWrap">
+      <div class="scroller">
+        <table>
+          <tbody>
+            <tr>
+              <td>Name</td>
+              <td>Abryx Valencia</td>
+            </tr>
+            <tr>
+              <td>Title</td>
+              <td>King of Hearts</td>
+            </tr>
+            <tr>
+              <td>
+                Stat
+              </td>
+              <td>
+                Detail
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stat
+              </td>
+              <td>
+                You can also have a long detail in case you want to and the statistic name to the left will adjust to be in the middle so it's not weird looking. In case you want to outline an ability or something.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stat
+              </td>
+              <td>
+                Detail
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stat
+              </td>
+              <td>
+                Detail
+              </td>
+            </tr>
+            <tr>
+              <td>
+                Stat
+              </td>
+              <td>
+                Detail
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- tab two -->
+  <div class="whiteSlide" id="history">
+    <div class="scrollerWrap">
+      <div class="scroller">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ac sagittis nisi. Sed aliquam ante dictum semper commodo. Vivamus pretium felis eget mi placerat sagittis. Ut dignissim tortor et lacus ornare, a accumsan mi pulvinar. Nunc sollicitudin laoreet nunc, in tristique felis condimentum in. Curabitur eget elementum ante. Mauris mattis dictum quam, non lobortis eros commodo ut. Nulla id dapibus velit, quis viverra metus. Sed molestie tempus nisi eget placerat. Morbi vulputate rhoncus suscipit. In et ex imperdiet nisl pretium vestibulum.
+        </p>
+        <p>
+          Morbi tristique urna sed dolor pulvinar, non tristique metus ultricies. Vestibulum et fermentum diam, sed faucibus turpis. Phasellus dignissim magna turpis, sit amet dictum nisl aliquet at. Morbi euismod, felis faucibus pharetra gravida, massa ex porta nisl, a lacinia diam dolor eu purus. Morbi nisi dui, sollicitudin eu dolor non, viverra elementum sem. Sed ultrices nisl eget metus viverra pharetra. Duis non metus bibendum, facilisis massa at, sagittis sapien. Suspendisse lectus felis, lobortis et sem non, tempor rhoncus neque. Integer ullamcorper magna sed magna tempus aliquam. Sed sit amet aliquam urna. Fusce eros justo, varius non laoreet nec, mattis condimentum est. Sed ac lacus blandit, blandit nulla non, porttitor lectus. Suspendisse sit amet lectus fermentum, viverra nisi at, convallis nisl. Sed ut tortor felis. Nam nec dapibus lacus, et bibendum neque.
+        </p>
+        <p>
+          Pellentesque nec volutpat enim. Cras tincidunt nibh nisl, at tincidunt orci auctor nec. Cras lobortis vehicula turpis, id consequat arcu convallis sed. Aliquam erat volutpat. Mauris fringilla ante tellus, sed luctus nunc placerat eget. Phasellus congue aliquet neque, ac vestibulum lorem lacinia nec. Ut nunc ex, dictum et libero quis, interdum accumsan metus.
+        </p>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- tab three -->
+  <div class="whiteSlide" id="three">
+    <div class="scrollerWrap">
+      <div class="scroller">
+        Normal Text | <b>Bold Text</b> | <i>Italicized Text</i> | <u>Underlined Text</u> | <s>Strikethrough</s> | <a href="#">Link</a>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- tab four -->
+  <div class="whiteSlide" id="friends">
+    <div class="scrollerWrap">
+      <div class="scroller">
+        <div class="friendList">
+          <div profile="https://roleplay.chat/profile.php?user=Ellexide" img="https://i.pinimg.com/564x/88/26/33/88263350fcaabf2b5b221ac34fd5dda4.jpg" class="friend">
+            <div class="name">Ellexide</div>
+            <div class="desc">The coderboi of this profile. This is just a sample friend popout.</div>
+          </div>
+          <div class="friend">
+            <div class="desc">Sample popout: Has description, no name, no image, no profile link.</div>
+          </div>
+          <div class="friend">
+            <div class="name">Has name, no desc, no image, no profile link</div>
+          </div>
+          <div class="friend">
+            <!-- no image, no name, no description, no profile link -->
+          </div>
+          <div class="friend" img="https://i.pinimg.com/564x/ed/51/59/ed5159e0ce454dec59106c9862d8765f.jpg">
+            <!-- has image, no name, no description, no profile link -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+    <!-- tab five -->
+  <div class="whiteSlide" id="ooc">
+    <div class="scrollerWrap">
+      <div class="scroller">
+        <ol>
+          <li>This profile is <a href="https://www.copyrighted.com/work/Wmw2dX8eiAYEM0e7" target="_blank" rel="noopener noreferrer">copyrighted</a> and made by <a href="http://roleplay.chat/profile.php?user=Ellexide" target="_blank" rel="noopener noreferrer">Ellexide Codes</a> for the sole use of <b>The King of Hearts</b>.</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+          <li>OOC bullet here</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- ============ your main image ============ -->
+  <div id="king"></div>
+  
+
+
+  <!-- ============ the friendpopout || don't touch -->
+  <div class="friendPopout">
+    <div class="img"></div>
+    <div class="name"></div>
+    <div class="desc">
+      <div class="scrollerWrap">
+        <div class="scroller">
+        </div>
+      </div>
+    </div>
+
+    <a target="_blank" rel="noopener noreferrer">View Profile</a>
+    <div class="exit"></div>
+  </div>
+  
+
+
+  <!-- ============ screen effect overlay ============ -->
+  <div id="music"></div>
+  <audio src="https://orig00.deviantart.net/ef91/f/2018/123/a/9/gothic_music_by_ellexidecodes-dcaida8.mp3" id="song"></audio>
+  <div id="screen"></div>
+  
+</div>
+<!-- ============ PROFILE END ============ -->
+
+
+<!-- ============ YOUR SCRIPTS || DO NOT TOUCH -->
+<script src="https://ellexidecodes.github.io/Profile-Codes/red/king-of-hearts.js"></script>
+<script src='https://ellexidecodes.github.io/Profile-Codes/free/credit.js'></script>
+    </body>
+  </html>
